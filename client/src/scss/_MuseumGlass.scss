@@ -1,0 +1,74 @@
+.CardDisplayer {
+  gap: 2vmin;
+  margin: auto;
+  width: 70%;
+  height: 75%;
+  z-index: 2;
+  .cardArea {
+    padding: 2vmin;
+    overflow: hidden;
+    flex-direction: column;
+    .insideArea {
+      width: 80%;
+      height: 60%;
+      margin-top: 2vmin;
+      opacity: 0.5;
+      background-color: #4c4c4a;
+      border: 1rem solid black;
+      .inside {
+        width: 50%;
+        z-index: -2;
+        opacity: 0.8;
+        box-shadow: 4vmin 2vmin 1vmin black;
+        height: 75%;
+      }
+      .lasers {
+        justify-content: space-around;
+        p {
+          z-index: -1;
+          width: 7.5%;
+          background-color: #969aa398;
+          filter: blur(0.3vmin);
+          &:first-child {
+            width: 15.5%;
+          }
+        }
+      }
+      span {
+        width: 15%;
+        color: red;
+        height: 100%;
+      }
+    }
+    .insideArea::before {
+      content: "";
+      width: 80%;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      height: 5%;
+      filter: blur(1.5vmin);
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+      z-index: -2;
+    }
+    .tableArea {
+      height: 40%;
+      flex-direction: column;
+      p {
+        filter: drop-shadow(0 0 1vmin black);
+        width: 90%;
+        height: 60%;
+        box-shadow: inset 0 0 1vmin black;
+        &:not(:nth-child(2)) {
+          height: 20%;
+          width: 100%;
+        }
+        span {
+          width: 35%;
+          height: 70%;
+        }
+      }
+    }
+  }
+}

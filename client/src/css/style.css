@@ -1,0 +1,913 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.rotateSpace {
+  animation: rotateSpace 15s ease-in-out infinite;
+}
+
+.slowerAnimation {
+  animation-duration: 15s !important;
+}
+
+.sideLeft {
+  transform-origin: bottom;
+  animation: sideLeft 25s ease-in infinite;
+}
+@keyframes sideLeft {
+  0%, 100% {
+    transform: rotateZ(20deg);
+  }
+  50% {
+    transform: rotateZ(-40deg);
+  }
+}
+
+.sideRight {
+  transform-origin: bottom;
+  animation: sideRight 25s ease-in infinite;
+}
+@keyframes sideRight {
+  0%, 100% {
+    transform: rotateZ(-40deg);
+  }
+  50% {
+    transform: rotateZ(20deg);
+  }
+}
+
+.rotateSpace:hover {
+  scale: 0.98;
+}
+
+.scaleAnimation {
+  animation: scaleAnimation 2.5s ease-in 1;
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(0);
+    filter: blur(0);
+  }
+  50% {
+    transform: scale(150);
+    filter: blur(4);
+  }
+}
+.upDown {
+  animation: upDown 4s ease-in-out infinite;
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.downUp {
+  animation: downUp 4s ease-in-out infinite;
+}
+@keyframes downUp {
+  0% {
+    transform: translateY(1vh);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1vh);
+  }
+}
+
+.decrease {
+  scale: 0.9;
+  box-shadow: 0 0 1rem rgba(4, 184, 4, 0.568);
+}
+
+@keyframes rotateSpace {
+  0% {
+    transform: rotateX(-20deg) rotateY(-20deg) rotateZ(-5deg);
+  }
+  50% {
+    transform: rotateX(20deg) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(-20deg) rotateY(-20deg) rotateZ(-5deg);
+  }
+}
+.eyesClosingOpening {
+  border: 0 solid black;
+  animation: eyesClosingOpening 4s ease-in-out infinite;
+}
+
+@keyframes eyesClosingOpening {
+  0% {
+    border-top: 0 solid black;
+    border-bottom: 0 solid black;
+  }
+  50% {
+    border-top: 2.5rem solid black;
+    border-bottom: 2.5rem solid black;
+  }
+  100% {
+    border-top: 0 solid black;
+    border-bottom: 0 solid black;
+  }
+}
+.rotate {
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(50deg) rotateX(65deg);
+  }
+  50% {
+    transform: rotateY(-20deg) rotateX(65deg);
+  }
+  100% {
+    transform: rotateY(50deg) rotateX(65deg);
+  }
+}
+.up {
+  transform: translateY(-15vh) scale(1) !important;
+  filter: blur(0) !important;
+}
+
+.forwardsDrive {
+  animation: forwardsDrive 80s ease-in-out infinite;
+}
+@keyframes forwardsDrive {
+  0% {
+    transform: translateY(-200vh);
+  }
+  50% {
+    transform: translateY(200vh);
+  }
+  100% {
+    transform: translateY(-200vh);
+  }
+}
+
+.backwardsDrive {
+  animation: backwardsDrive 80s ease-in-out infinite;
+}
+@keyframes backwardsDrive {
+  0% {
+    transform: translateY(200vh);
+  }
+  50% {
+    transform: translateY(-200vh);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+.rotateText {
+  transform: rotateX(60deg);
+}
+
+.slow {
+  animation-duration: 10s;
+}
+
+.slowe {
+  animation-duration: 31s !important;
+}
+
+.slower {
+  animation-duration: 60s !important;
+}
+
+.fly {
+  animation: flyNormal 3s ease-in-out infinite;
+}
+@keyframes flyNormal {
+  0% {
+    translate: 0;
+  }
+  50% {
+    translate: 0 -1.5vh;
+  }
+  100% {
+    translate: 0;
+  }
+}
+
+.flyOpposite {
+  animation: flyOpposite 3s ease-in-out infinite;
+}
+@keyframes flyOpposite {
+  0% {
+    translate: 0 -1.5vh;
+  }
+  50% {
+    translate: 0;
+  }
+  100% {
+    translate: 0 -1.5vh;
+  }
+}
+
+.callAnimation {
+  animation: callAnimation 4.5s ease infinite;
+}
+
+@keyframes callAnimation {
+  0% {
+    outline-offset: 2.1vmin;
+    outline: 2.5vmin dotted white;
+  }
+  50% {
+    outline-offset: 6vmin;
+  }
+  100% {
+    outline: initial;
+    outline-style: hidden;
+  }
+}
+.memory {
+  animation: memory 4s linear infinite;
+}
+
+.rotateCircle {
+  animation: rotateCircle 4s linear infinite;
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes memory {
+  0%, 100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(0.25);
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(-1.7vh);
+  }
+  50% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-1.7vh);
+  }
+}
+
+.rotate1 {
+  transform: rotateX(20deg) rotateZ(-20deg);
+  box-shadow: -1.5rem 2rem 1rem rgba(0, 0, 0, 0.7411764706);
+}
+
+.rotate2 {
+  transform: rotateX(-20deg) rotateZ(20deg);
+  box-shadow: 1.5rem 2rem 1rem rgba(0, 0, 0, 0.7411764706);
+}
+
+.spotlight::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 15vw solid transparent;
+  border-top: 90vh solid rgba(255, 255, 255, 0.404);
+  left: 40%;
+  filter: blur(4rem);
+  position: absolute;
+}
+
+.rotateSpace {
+  animation: rotateSpace 15s ease-in-out infinite;
+}
+
+.slowerAnimation {
+  animation-duration: 15s !important;
+}
+
+.sideLeft {
+  transform-origin: bottom;
+  animation: sideLeft 25s ease-in infinite;
+}
+@keyframes sideLeft {
+  0%, 100% {
+    transform: rotateZ(20deg);
+  }
+  50% {
+    transform: rotateZ(-40deg);
+  }
+}
+
+.sideRight {
+  transform-origin: bottom;
+  animation: sideRight 25s ease-in infinite;
+}
+@keyframes sideRight {
+  0%, 100% {
+    transform: rotateZ(-40deg);
+  }
+  50% {
+    transform: rotateZ(20deg);
+  }
+}
+
+.rotateSpace:hover {
+  scale: 0.98;
+}
+
+.scaleAnimation {
+  animation: scaleAnimation 2.5s ease-in 1;
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(0);
+    filter: blur(0);
+  }
+  50% {
+    transform: scale(150);
+    filter: blur(4);
+  }
+}
+.upDown {
+  animation: upDown 4s ease-in-out infinite;
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.downUp {
+  animation: downUp 4s ease-in-out infinite;
+}
+@keyframes downUp {
+  0% {
+    transform: translateY(1vh);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1vh);
+  }
+}
+
+.decrease {
+  scale: 0.9;
+  box-shadow: 0 0 1rem rgba(4, 184, 4, 0.568);
+}
+
+@keyframes rotateSpace {
+  0% {
+    transform: rotateX(-20deg) rotateY(-20deg) rotateZ(-5deg);
+  }
+  50% {
+    transform: rotateX(20deg) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(-20deg) rotateY(-20deg) rotateZ(-5deg);
+  }
+}
+.eyesClosingOpening {
+  border: 0 solid black;
+  animation: eyesClosingOpening 4s ease-in-out infinite;
+}
+
+@keyframes eyesClosingOpening {
+  0% {
+    border-top: 0 solid black;
+    border-bottom: 0 solid black;
+  }
+  50% {
+    border-top: 2.5rem solid black;
+    border-bottom: 2.5rem solid black;
+  }
+  100% {
+    border-top: 0 solid black;
+    border-bottom: 0 solid black;
+  }
+}
+.rotate {
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(50deg) rotateX(65deg);
+  }
+  50% {
+    transform: rotateY(-20deg) rotateX(65deg);
+  }
+  100% {
+    transform: rotateY(50deg) rotateX(65deg);
+  }
+}
+.up {
+  transform: translateY(-15vh) scale(1) !important;
+  filter: blur(0) !important;
+}
+
+.forwardsDrive {
+  animation: forwardsDrive 80s ease-in-out infinite;
+}
+@keyframes forwardsDrive {
+  0% {
+    transform: translateY(-200vh);
+  }
+  50% {
+    transform: translateY(200vh);
+  }
+  100% {
+    transform: translateY(-200vh);
+  }
+}
+
+.backwardsDrive {
+  animation: backwardsDrive 80s ease-in-out infinite;
+}
+@keyframes backwardsDrive {
+  0% {
+    transform: translateY(200vh);
+  }
+  50% {
+    transform: translateY(-200vh);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+.rotateText {
+  transform: rotateX(60deg);
+}
+
+.slow {
+  animation-duration: 10s;
+}
+
+.slowe {
+  animation-duration: 31s !important;
+}
+
+.slower {
+  animation-duration: 60s !important;
+}
+
+.fly {
+  animation: flyNormal 3s ease-in-out infinite;
+}
+@keyframes flyNormal {
+  0% {
+    translate: 0;
+  }
+  50% {
+    translate: 0 -1.5vh;
+  }
+  100% {
+    translate: 0;
+  }
+}
+
+.flyOpposite {
+  animation: flyOpposite 3s ease-in-out infinite;
+}
+@keyframes flyOpposite {
+  0% {
+    translate: 0 -1.5vh;
+  }
+  50% {
+    translate: 0;
+  }
+  100% {
+    translate: 0 -1.5vh;
+  }
+}
+
+.callAnimation {
+  animation: callAnimation 4.5s ease infinite;
+}
+
+@keyframes callAnimation {
+  0% {
+    outline-offset: 2.1vmin;
+    outline: 2.5vmin dotted white;
+  }
+  50% {
+    outline-offset: 6vmin;
+  }
+  100% {
+    outline: initial;
+    outline-style: hidden;
+  }
+}
+.memory {
+  animation: memory 4s linear infinite;
+}
+
+.rotateCircle {
+  animation: rotateCircle 4s linear infinite;
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes memory {
+  0%, 100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(0.25);
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(-1.7vh);
+  }
+  50% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-1.7vh);
+  }
+}
+
+.rotate1 {
+  transform: rotateX(20deg) rotateZ(-20deg);
+  box-shadow: -1.5rem 2rem 1rem rgba(0, 0, 0, 0.7411764706);
+}
+
+.rotate2 {
+  transform: rotateX(-20deg) rotateZ(20deg);
+  box-shadow: 1.5rem 2rem 1rem rgba(0, 0, 0, 0.7411764706);
+}
+
+.spotlight::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 15vw solid transparent;
+  border-top: 90vh solid rgba(255, 255, 255, 0.404);
+  left: 40%;
+  filter: blur(4rem);
+  position: absolute;
+}
+
+.getIn {
+  animation: getBig 1.5s linear 1;
+  animation-delay: 1.5s;
+}
+
+@keyframes getBig {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(17);
+  }
+}
+@keyframes portalRotate {
+  0% {
+    transform: rotate(0) translate(1vmin, 1vmin);
+  }
+  50% {
+    transform: rotate(180deg) translate(0.5vmin, 0.5vmin);
+  }
+  100% {
+    transform: rotate(360deg) translate(1vmin, 1vmin);
+  }
+}
+.rotateBackwards {
+  animation: rotateBackwards 3s linear infinite;
+}
+
+@keyframes rotateBackwards {
+  0% {
+    transform: rotate(360deg) translate(1vmin, 1vmin);
+  }
+  50% {
+    transform: rotate(180deg) translate(0.5vmin, 0.5vmin);
+  }
+  100% {
+    transform: rotate(0) translate(1vmin, 1vmin);
+  }
+}
+.portal {
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  box-shadow: 0 0 1vmin black;
+  filter: drop-shadow(0 0 1vmin black);
+  z-index: 4;
+  overflow: hidden;
+  background-image: initial;
+  align-items: center;
+}
+
+.portal img {
+  width: 45rem;
+  height: 70%;
+  filter: drop-shadow(0 0 10vmin white);
+  animation: grow 6s linear 1, portalRotate 0.3s linear infinite;
+  outline: 3px solid rgba(255, 255, 255, 0.479);
+  outline-offset: 4vmin;
+  border-radius: 50%;
+  border-top: 3px solid white;
+  box-shadow: 0 0 2vmin 2vmin black;
+  transform: scale(17);
+}
+
+@keyframes grow {
+  from {
+    outline-offset: 1vmin;
+    scale: 0.1;
+  }
+  to {
+    outline-offset: 4vmin;
+    scale: 1;
+    box-shadow: 0 0 2vmin 2vmin black;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Lemon", serif;
+}
+
+.primaryGradient {
+  background-image: linear-gradient(135deg, rgba(43, 71, 188, 0.5) 0%, rgba(0, 0, 0, 0.363) 100%);
+}
+
+:root {
+  --bg-sky-500-10: rgba(14, 164, 233, 0.123);
+  --bg-orange-500-10: rgba(249, 116, 22, 0.075);
+  --bg-green-800-10: rgba(34, 197, 94, 0.212);
+}
+
+.bgGradientRegister {
+  background: linear-gradient(-90deg, rgba(0, 255, 255, 0.17), rgba(0, 255, 255, 0.17), rgba(0, 255, 255, 0.17), black, black, black);
+}
+
+.bgGradientLogin {
+  background: linear-gradient(-25deg, purple, purple, black, black, black);
+}
+
+.bgGradientChat {
+  background: linear-gradient(-25deg, rgba(0, 255, 255, 0.568), rgba(0, 255, 255, 0.568), black, black, black);
+}
+
+.bgGradientFeed {
+  background: linear-gradient(90deg, purple, purple, black, black, black);
+}
+
+.bgGradientShop {
+  background: linear-gradient(-50deg, purple, black, black, black);
+}
+
+.bgGradientFeasts {
+  background: linear-gradient(0, rgba(0, 255, 255, 0.568), black, black, black);
+}
+
+.bgGradientAbout {
+  background: linear-gradient(0deg, purple, black, black, black);
+}
+
+.triangleOne {
+  width: 0;
+  height: 0;
+  border-right: 100vw solid transparent;
+  border-top: 100vh solid transparent;
+}
+
+dialog::backdrop,
+dialog::-webkit-backdrop,
+dialog::-moz-backdrop,
+dialog::-ms-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+}
+
+dialog {
+  background: transparent;
+}
+
+.notAllowed {
+  background-color: rgba(121, 119, 119, 0.219);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.tShadow {
+  text-shadow: 0 0 1rem rgba(255, 255, 255, 0.2039215686);
+}
+
+.cardSquare {
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  box-shadow: 0 0 1rem black;
+  animation-duration: 4s !important;
+  background: linear-gradient(var(--bg-sky-500-10), var(--bg-orange-500-10));
+}
+
+.tvBox {
+  transform-style: preserve-3d;
+}
+
+.tvBox::before,
+.tvBox::after {
+  content: "";
+  width: 40vw;
+  height: 70vh;
+  overflow: hidden;
+  filter: blur(1rem) drop-shadow(0 0 6rem cyan);
+  position: absolute;
+  z-index: -50;
+  border-radius: 500px;
+  display: inherit;
+  transform-origin: center;
+  background: transparent;
+}
+
+.tvBox::before {
+  animation: rightCircle 25s linear infinite;
+}
+@keyframes rightCircle {
+  0% {
+    transform: rotateX(80deg) rotateY(33deg) rotateZ(0);
+    border-top: 6vmin solid rgba(135, 207, 235, 0.171);
+    border-bottom: 6vmin solid rgba(135, 207, 235, 0.171);
+    transform-origin: center;
+  }
+  50% {
+    transform: rotateX(80deg) rotateY(33deg) rotateZ(180deg);
+    border-top: 6vmin solid rgba(255, 166, 0, 0.199);
+    border-bottom: 6vmin solid rgba(255, 166, 0, 0.199);
+    transform-origin: start;
+  }
+  100% {
+    transform: rotateX(80deg) rotateY(33deg) rotateZ(360deg);
+    border-top: 6vmin solid rgba(135, 207, 235, 0.171);
+    border-bottom: 6vmin solid rgba(135, 207, 235, 0.171);
+    transform-origin: center;
+  }
+}
+
+.tvBox::after {
+  animation: leftCircle 25s linear infinite;
+}
+@keyframes leftCircle {
+  0% {
+    transform: rotateX(80deg) rotateY(-33deg) rotateZ(0);
+    border-top: 6vmin solid rgba(135, 207, 235, 0.171);
+    border-bottom: 6vmin solid rgba(135, 207, 235, 0.171);
+    transform-origin: center;
+  }
+  50% {
+    transform: rotateX(80deg) rotateY(-33deg) rotateZ(180deg);
+    border-top: 6vmin solid rgba(255, 166, 0, 0.199);
+    border-bottom: 6vmin solid rgba(255, 166, 0, 0.199);
+    transform-origin: start;
+  }
+  100% {
+    transform: rotateX(80deg) rotateY(-33deg) rotateZ(360deg);
+    border-top: 6vmin solid rgba(135, 207, 235, 0.171);
+    border-bottom: 6vmin solid rgba(135, 207, 235, 0.171);
+    transform-origin: center;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 83, 233, 0.329) rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(14, 165, 233, 0.3);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(14, 165, 233, 0.3);
+}
+
+.CardDisplayer {
+  gap: 2vmin;
+  margin: auto;
+  width: 70%;
+  height: 75%;
+  z-index: 2;
+}
+.CardDisplayer .cardArea {
+  padding: 2vmin;
+  overflow: hidden;
+  flex-direction: column;
+}
+.CardDisplayer .cardArea .insideArea {
+  width: 80%;
+  height: 60%;
+  margin-top: 2vmin;
+  opacity: 0.5;
+  background-color: #4c4c4a;
+  border: 1rem solid black;
+}
+.CardDisplayer .cardArea .insideArea .inside {
+  width: 50%;
+  z-index: -2;
+  opacity: 0.8;
+  box-shadow: 4vmin 2vmin 1vmin black;
+  height: 75%;
+}
+.CardDisplayer .cardArea .insideArea .lasers {
+  justify-content: space-around;
+}
+.CardDisplayer .cardArea .insideArea .lasers p {
+  z-index: -1;
+  width: 7.5%;
+  background-color: rgba(150, 154, 163, 0.5960784314);
+  filter: blur(0.3vmin);
+}
+.CardDisplayer .cardArea .insideArea .lasers p:first-child {
+  width: 15.5%;
+}
+.CardDisplayer .cardArea .insideArea span {
+  width: 15%;
+  color: red;
+  height: 100%;
+}
+.CardDisplayer .cardArea .insideArea::before {
+  content: "";
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  height: 5%;
+  filter: blur(1.5vmin);
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  z-index: -2;
+}
+.CardDisplayer .cardArea .tableArea {
+  height: 40%;
+  flex-direction: column;
+}
+.CardDisplayer .cardArea .tableArea p {
+  filter: drop-shadow(0 0 1vmin black);
+  width: 90%;
+  height: 60%;
+  box-shadow: inset 0 0 1vmin black;
+}
+.CardDisplayer .cardArea .tableArea p:not(:nth-child(2)) {
+  height: 20%;
+  width: 100%;
+}
+.CardDisplayer .cardArea .tableArea p span {
+  width: 35%;
+  height: 70%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;/*# sourceMappingURL=style.css.map */

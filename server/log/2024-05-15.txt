@@ -1,0 +1,7 @@
+
+    -----------------------------------
+    📅 REQUEST DATE: 16-37-27-067Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?

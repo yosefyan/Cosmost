@@ -1,0 +1,73 @@
+@mixin Move($start, $end, $direction, $name) {
+  @keyframes #{$name} {
+    0% {
+      transform: translate#{$direction }($start);
+    }
+    50% {
+      transform: translate#{$direction }($end);
+    }
+    100% {
+      transform: translate#{$direction }($start);
+    }
+  }
+}
+
+@mixin sideMove($start, $end, $name) {
+  @keyframes #{$name} {
+    0%,
+    100% {
+      transform: rotateZ($start);
+    }
+    50% {
+      transform: rotateZ($end);
+    }
+  }
+}
+
+@mixin Triangle($side, $side2) {
+  width: 0;
+  height: 0;
+  border-right: $side;
+  border-top: $side2;
+}
+
+@mixin Circle($side, $name) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotateX(80deg) rotateY($side) rotateZ(0);
+      border-top: 6vmin solid rgba(135, 207, 235, 0.171);
+      border-bottom: 6vmin solid rgba(135, 207, 235, 0.171);
+      transform-origin: center;
+    }
+    50% {
+      transform: rotateX(80deg) rotateY($side) rotateZ(180deg);
+      border-top: 6vmin solid rgba(255, 166, 0, 0.199);
+      border-bottom: 6vmin solid rgba(255, 166, 0, 0.199);
+      transform-origin: start;
+    }
+    100% {
+      transform: rotateX(80deg) rotateY($side) rotateZ(360deg);
+      border-top: 6vmin solid rgba(135, 207, 235, 0.171);
+      border-bottom: 6vmin solid rgba(135, 207, 235, 0.171);
+      transform-origin: center;
+    }
+  }
+}
+
+@mixin bgGradient($deg, $colors...) {
+  background: linear-gradient($deg, $colors);
+}
+
+@mixin Fly($name, $start, $end) {
+  @keyframes #{$name} {
+    0% {
+      translate: $start;
+    }
+    50% {
+      translate: $end;
+    }
+    100% {
+      translate: $start;
+    }
+  }
+}

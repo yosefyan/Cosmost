@@ -1,0 +1,12 @@
+export { default as Home } from "./Home/Home";
+export { default as Login } from "./auth/Login";
+export { default as Register } from "./auth/Register";
+export { default as Teleporter } from "./Teleporter/Teleporter";
+export { default as Feed } from "./Feed/Feed";
+export { default as About } from "./About/About";
+export { default as Shop } from "./Shop/Shop";
+export { default as Loading } from "./Loading/Loading";
+export { default as Profile } from "./Profile/Profile";
+export { default as Chat } from "./Chat/Chat";
+export { default as Feasts } from "./Feasts/Feasts";
+export { default as Admin } from "./Admin/Admin";

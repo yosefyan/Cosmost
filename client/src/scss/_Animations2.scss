@@ -1,0 +1,79 @@
+@import "./Animations";
+
+.getIn {
+  animation: getBig 1.5s linear 1;
+  animation-delay: 1.5s;
+}
+
+@keyframes getBig {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(17);
+  }
+}
+
+@keyframes portalRotate {
+  0% {
+    transform: rotate(0) translate(1vmin, 1vmin);
+  }
+  50% {
+    transform: rotate(180deg) translate(0.5vmin, 0.5vmin);
+  }
+  100% {
+    transform: rotate(360deg) translate(1vmin, 1vmin);
+  }
+}
+
+.rotateBackwards {
+  animation: rotateBackwards 3s linear infinite;
+}
+
+@keyframes rotateBackwards {
+  0% {
+    transform: rotate(360deg) translate(1vmin, 1vmin);
+  }
+  50% {
+    transform: rotate(180deg) translate(0.5vmin, 0.5vmin);
+  }
+  100% {
+    transform: rotate(0) translate(1vmin, 1vmin);
+  }
+}
+.portal {
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  box-shadow: 0 0 1vmin black;
+  filter: drop-shadow(0 0 1vmin black);
+  z-index: 4;
+  overflow: hidden;
+  background-image: initial;
+  align-items: center;
+}
+
+.portal img {
+  width: 45rem;
+  height: 70%;
+  filter: drop-shadow(0 0 10vmin white);
+  animation: grow 6s linear 1, portalRotate 0.3s linear infinite;
+  outline: 3px solid rgba(255, 255, 255, 0.479);
+  outline-offset: 4vmin;
+  border-radius: 50%;
+  border-top: 3px solid white;
+  box-shadow: 0 0 2vmin 2vmin black;
+  transform: scale(17);
+}
+
+@keyframes grow {
+  from {
+    outline-offset: 1vmin;
+    scale: (0.1);
+  }
+  to {
+    outline-offset: 4vmin;
+    scale: 1;
+    box-shadow: 0 0 2vmin 2vmin black;
+  }
+}

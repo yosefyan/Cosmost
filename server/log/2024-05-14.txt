@@ -1,0 +1,103 @@
+
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 08-54-13-920Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
