@@ -7,7 +7,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production nodemon server.js",
     "dev": "cross-env DEBUG=app:* NODE_ENV=development nodemon server.js",
-    "build": "npm run build"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +37,8 @@
     "socket.io": "^4.7.5"
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.8"
+    "@types/uuid": "^9.0.8",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   }
 }
