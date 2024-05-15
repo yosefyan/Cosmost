@@ -1,19 +1,19 @@
 import axios from "axios";
 
-const localInstance = axios.create({
-  baseURL: "http://localhost:5174/api/",
-});
+const baseURL = import.meta.env.VITE_SERVER_URL;
 
-const cloudInstance = axios.create({
-  baseURL: "https://api.example.com/api/",
+console.log(baseURL)
+
+const localInstance = axios.create({
+  baseURL: `${baseURL}/api/`,
 });
 
 const uploadInstance = axios.create({
-  baseURL: "http://localhost:5174/upload/",
+  baseURL: `${baseURL}/upload/`,
 });
 
 const authInstance = axios.create({
-  baseURL: "http://localhost:5174/auth/",
+  baseURL: `${baseURL}/auth/`,
 });
 
 export const addAuthorizationToken = (config, shouldIncludeToken) => {
@@ -24,4 +24,4 @@ export const addAuthorizationToken = (config, shouldIncludeToken) => {
   return config;
 };
 
-export { localInstance, cloudInstance, uploadInstance, authInstance };
+export { localInstance, uploadInstance, authInstance };
