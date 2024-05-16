@@ -46,7 +46,7 @@ app.use(
     saveUninitialized: true,
   })
 );
-
+console.log("socket origin", SOCKET_ORIGIN);
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {

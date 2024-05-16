@@ -89,7 +89,7 @@ const FriendRequests = ({ classes, whichToShow }) => {
                 "justify-evenly"
               )} flex-col`}
             >
-              <ProfileNameTitle dataType={'friendRequest'} rightSideData={htmlData(da)} data={da} />;
+              <ProfileNameTitle dataType={'friendRequest'} rightSideData={htmlData(da)} data={da} />
             </div>
           );
         })
