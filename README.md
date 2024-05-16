@@ -61,10 +61,6 @@ Welcome to **Cosmost**, a full-stack social network website designed to provide 
 
 Cosmost's design is inspired by the beauty and mystery of space. Our aim is to create a social network that not only connects people but also offers a visually stunning and unique user experience. The space-related design elements are crafted to give you the feeling of exploring the cosmos, making your social interactions more engaging and enjoyable.
 
-## Getting Started
-
-To get started with Cosmost, simply visit: https://cosmost-six.vercel.app/
-
 ## License
 
 This project is licensed to Yosef Yanushok.
