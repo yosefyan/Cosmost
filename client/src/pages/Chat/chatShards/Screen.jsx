@@ -11,9 +11,11 @@ const Screen = ({ userData, handleIcons, whichToShow }) => {
   const [messageReceived, setMessageReceived] = useState("");
   const [socket, setSocket] = useState(null);
   const containerToScroll = useRef(null);
-  const [roomInfo, setRoomInfo] = useState([])
+  const [roomInfo, setRoomInfo] = useState([]);
+  const baseURL =
+  import.meta.env.VITE_SERVER_URL || "https://cosmost.onrender.com";
   useEffect(() => {
-    const newSocket = io("http://localhost:5174");
+    const newSocket = io(baseURL);
     setSocket(newSocket);
 
     return () => {

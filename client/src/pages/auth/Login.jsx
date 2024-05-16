@@ -43,8 +43,11 @@ const Login = () => {
     },
   });
 
+  const baseURL =
+    import.meta.env.VITE_SERVER_URL || "https://cosmost.onrender.com";
+
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5174/auth/google";
+    window.location.href = `${baseURL}/auth/google`;
   };
 
   return (
@@ -69,7 +72,11 @@ const Login = () => {
         >
           Login
         </h1>
-        <h3 className={`h-full lg:h-[0] my-8 lg:my-0 lg:p-4 ${titleStyles("text-1xl lg:text-4xl")} ${textColors.TERTIARY}`}>
+        <h3
+          className={`h-full lg:h-[0] my-8 lg:my-0 lg:p-4 ${titleStyles(
+            "text-1xl lg:text-4xl"
+          )} ${textColors.TERTIARY}`}
+        >
           You are just one mile away.
         </h3>
         <div className={`cursor-pointer w-full h-[50%] relative`}>
