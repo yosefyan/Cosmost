@@ -24,7 +24,7 @@ envAdapter();
 const log = debug("app:Connections");
 const app = express();
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
-const PORT = process.env.PORT;
+const { UPLOAD_URL, PORT } = process.env;
 
 app.use(cors());
 app.use(compression());
@@ -89,7 +89,7 @@ export const upload = multer({
 
 app.post("/upload", upload.single("image"), (req, res) => {
   const filename = req.file.filename;
-  const fileUrl = `http://localhost:${PORT}/uploads/${filename}`;
+  const fileUrl = `${UPLOAD_URL}/uploads/${filename}`;
 
   res.status(200).json(fileUrl);
 });
