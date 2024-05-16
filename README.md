@@ -40,7 +40,7 @@ Welcome to **Cosmost**, a full-stack social network website designed to provide 
 ### Chat
 
 - **Add your friends:** Connect with other people across the galaxy in an online environment.
-- **Send a signal:** Send your signal to your friends so they can reply back. Our technology let's you communicate through every far distance in the speed of light.
+- **Send a signal:** Send your signal to your friends so they can reply back. Cosmost's technology let's you communicate through every far distance in the speed of light.
 
 ### Feasts
 
@@ -54,12 +54,12 @@ Welcome to **Cosmost**, a full-stack social network website designed to provide 
 
 ### About
 
-- **Our Story:** Learn about the inspiration behind Cosmost and why it's the perfect social network for you.
+- **Cosmost's Story:** Learn about the inspiration behind Cosmost and why it's the perfect social network for you.
 - **Customer Testimonials:** Read positive comments from users who love our service.
 
 ## Design Philosophy
 
-Cosmost's design is inspired by the beauty and mystery of space. Our aim is to create a social network that not only connects people but also offers a visually stunning and unique user experience. The space-related design elements are crafted to give you the feeling of exploring the cosmos, making your social interactions more engaging and enjoyable.
+Cosmost's design is inspired by the beauty and mystery of space. Cosmost's aim is to create a social network that not only connects people but also offers a visually stunning and unique user experience. The space-related design elements are crafted to give you the feeling of exploring the cosmos, making your social interactions more engaging and enjoyable.
 
 ## License
 
