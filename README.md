@@ -67,6 +67,6 @@ This project is licensed to Yosef Yanushok.
 
 ## Final Letter
 
-Thank you for visiting Cosmost. We hope you enjoy your journey through our space-themed social network.
+Thank you for visiting Cosmost. I hope you enjoy your journey through our space-themed social network.
 
 Cosmost - Get the Most from the Cosmost.
