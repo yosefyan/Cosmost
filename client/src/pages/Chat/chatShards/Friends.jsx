@@ -23,7 +23,7 @@ const Friends = ({ whichToShow, classes, userPayload, handleUserData }) => {
           endpoint: `${serverRoutes.get.getUserById}${userPayload._id}`,
           shouldToken: true,
         });
-
+        console.log('data', data)
         const { data: friends } = await dynamicAxiosMethod({
           method: "get",
           endpoint: `${
@@ -31,6 +31,7 @@ const Friends = ({ whichToShow, classes, userPayload, handleUserData }) => {
           }${data[0].Friends.join("-")}`,
           shouldToken: true,
         });
+        console.log('friends', friends)
         setMyData(friends);
         handleUserData({ data: friends, i: null });
       } catch (error) {
