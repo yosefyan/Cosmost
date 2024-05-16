@@ -4,15 +4,17 @@ import { centerItem, gradient, titleStyles } from "../../utils/utils";
 import InfoSquare from "./adminShards/InfoSquare";
 import dynamicAxiosMethod from "../../helpers/dynamicAxiosMethod";
 import serverRoutes from "../../constants/serverRoutes";
-import {
-  gradientColors,
-  textColors,
-} from "../../constants/colorsData";
+import { gradientColors } from "../../constants/colorsData";
 import ProfileNameTitle from "../../components/ProfileNameTitle";
-import useInitLogin from "../../hooks/useInitLogin";
+import { useSelector } from "react-redux";
 
 const Admin = () => {
   const [allUsers, setAllUsers] = useState([]);
+
+  const { toggleDialog } = useSelector((state) => ({
+    toggleDialog: state.globalReducer.dialogData.toggleDialog,
+  }));
+
   useEffect(() => {
     try {
       const getAllUsers = async () => {
@@ -24,10 +26,8 @@ const Admin = () => {
         setAllUsers(res.data);
       };
       getAllUsers();
-    } catch (error) {
-      
-    }
-  }, []);
+    } catch (error) {}
+  }, [toggleDialog]);
 
   return (
     <div

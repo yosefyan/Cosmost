@@ -163,7 +163,7 @@ const useGenerateInputs = ({
                           : anyAdditional.classes
                       } gap-4 ${i === 0 ? "p-4" : ""}`}
                     >
-                      <h1 className="tShadow">{titles[i]}</h1>
+                      <h1 className="tShadow text-3xl lg:text-8xl">{titles[i]}</h1>
                       <input
                         value={value}
                         onChange={(e) => handleInputs(e, key)}
@@ -174,7 +174,7 @@ const useGenerateInputs = ({
                         }`}
                         className={` ${centerItem(
                           ""
-                        )} text-center p-2 text-white/60 text-1xl ${
+                        )} text-center p-2 text-white/60 text-[1rem] ${
                           value && value.length > 15 ? "lg:text-1xl" : "lg:text-2xl"
                         } ${i === 0 ? "w-full" : "w-[80%]"} ${
                           bgColors.PRIMARY
