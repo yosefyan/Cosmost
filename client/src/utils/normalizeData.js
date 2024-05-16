@@ -16,6 +16,9 @@ const normalizeData = (data, userPayload) => {
     ...rest
   } = data;
 
+  const baseURL =
+    import.meta.env.VITE_SERVER_URL || "https://cosmost.onrender.com";
+
   return {
     Register: {
       ...rest,
@@ -42,7 +45,7 @@ const normalizeData = (data, userPayload) => {
       Textarea,
       image: {
         ...(Upload && {
-          Upload: `http://localhost:5174/uploads/${selectedFile.name}`,
+          Upload: `${baseURL}/uploads/${selectedFile.name}`,
         }),
         Alt: "Post",
       },
@@ -85,7 +88,7 @@ const normalizeData = (data, userPayload) => {
       },
     },
     editComment: {
-      Comment: data.Comment
+      Comment: data.Comment,
     },
     editProfile: {
       userData: {

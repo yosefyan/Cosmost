@@ -1,3 +1,4 @@
+import envAdapter from "../helpers/envAdapter.js";
 import uniqueNumber from "../helpers/uniqueNumber.js";
 import Posts from "../models/MongoDB/Collections/Schemas/Posts.js";
 import Users from "../models/MongoDB/Collections/Schemas/Users.js";
@@ -5,6 +6,9 @@ import {
   createInstance,
   getInstance,
 } from "../models/MongoDB/Collections/dynamicService.js";
+
+envAdapter();
+const { UPLOAD_URL } = process.env;
 
 const initialUsers = async () => {
   let users = [
@@ -16,7 +20,7 @@ const initialUsers = async () => {
       Bio: "fafaf fasfag sgjskgh skj hgkshgksd ghkgsdhkgjsh gkjsgds",
       userData: {
         Username: "Morda",
-        Profile_Picture: "http://localhost:5174/uploads/Morda.jpg",
+        Profile_Picture: `${UPLOAD_URL}/uploads/Morda.jpg`,
         Alt: "image of space",
         Rank: "Star",
       },
@@ -58,7 +62,7 @@ const initialUsers = async () => {
       Bio: "fafaf fasfag sgjskgh skj hgkshgksd ghkgsdhkgjsh gkjsgds",
       userData: {
         Username: "Michael",
-        Profile_Picture: "http://localhost:5174/uploads/Michael.jpg",
+        Profile_Picture: `${UPLOAD_URL}/uploads/Michael.jpg`,
         Alt: "image of space",
         Rank: "Cosmic",
       },
@@ -100,7 +104,7 @@ const initialUsers = async () => {
       Bio: "fafaf fasfag sgjskgh skj hgkshgksd ghkgsdhkgjsh gkjsgds",
       userData: {
         Username: "Mika",
-        Profile_Picture: "http://localhost:5174/uploads/Mika.jpg",
+        Profile_Picture: `${UPLOAD_URL}/uploads/Mika.jpg`,
         Alt: "image of space",
         Rank: "Universal",
       },

@@ -95,7 +95,7 @@ app.post("/upload", upload.single("image"), (req, res) => {
 });
 
 app.get("/upload/", (req, res) => {
-  return res.status(200).json("hi");
+  return res.status(200).json(res);
 });
 const staticFilesDirectory = path.join(__dirname, "uploads");
 
