@@ -228,7 +228,6 @@ const notificationsRouteData = {
     ],
   },
 };
-
 const authRouteData = {
   get: {
     urls: ["/google", "/google/callback", "/success", "/failure"],
@@ -248,12 +247,13 @@ const authRouteData = {
             return sessionData.passport;
           });
 
-          const user = await result[0]?.user;
+          const user = (await result[0]?.user) || (await result[1]?.user);
 
           if (user) {
             const { _id, isAdmin, userData, moneyData, ownedStuff } =
               result[0]?.user;
             const { Profile_Picture, Alt, Rank, Username } = userData;
+
             const generatedToken = await generateToken({
               _id,
               isAdmin,
