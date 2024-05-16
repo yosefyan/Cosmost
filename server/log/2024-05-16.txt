@@ -1,0 +1,73 @@
+
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername//" was not found, did you mean "/api/users/getUserByUsername//"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUsersWithDifferentIds/" was not found, did you mean "/api/users/getUsersWithDifferentIds/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUsersWithDifferentIds/" was not found, did you mean "/api/users/getUsersWithDifferentIds/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?
+    -----------------------------------
+    📅 REQUEST DATE: 13-55-35-654Z 
+    
+    📡 REQUEST STATUS: 404
+    
+    📩 REQUEST MESSAGE: Route "/api/users/getUserByUsername/" was not found, did you mean "/api/users/getUserByUsername/"?

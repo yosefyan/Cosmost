@@ -155,7 +155,11 @@ const AddFriend = ({ classes, userPayload }) => {
                     bgColors.SECONDARY
                   } shadow-[0_0_1rem_fuchsia]`}
                 >
-                  <ProfileNameTitle dataType={`addFriend`} data={user} />
+                  <ProfileNameTitle
+                    rightSideData={" "}
+                    dataType={`addFriend`}
+                    data={user}
+                  />
                   <IconComponent
                     onClick={() => handleAddPerson(user)}
                     classes={`text-5xl ${

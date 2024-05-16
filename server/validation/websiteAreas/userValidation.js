@@ -40,9 +40,6 @@ const userValidation = async (
             }),
           },
           ...emailPasswordResult,
-          // ...(shouldEmail && {
-            // isAdmin: inlineValidation({ type: Joi.boolean() }),
-          // }),
           Date_Of_Birth: Joi.date().max("now").iso().less("now").required(),
           Bio: inlineValidation({
             min: 15,

@@ -17,14 +17,13 @@ import loggerAdapter from "./terminalLoggers/loggerAdapter.js";
 import multer from "multer";
 import http from "http";
 import { Server } from "socket.io";
-import authMiddleware from "./middlewares/authMiddleware.js";
 
 envAdapter();
 
 const log = debug("app:Connections");
 const app = express();
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
-const { UPLOAD_URL, PORT } = process.env;
+const { UPLOAD_URL, PORT, SOCKET_ORIGIN } = process.env;
 
 app.use(cors());
 app.use(compression());
@@ -51,7 +50,7 @@ app.use(
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: SOCKET_ORIGIN,
     methods: ["GET", "POST"],
   },
 });

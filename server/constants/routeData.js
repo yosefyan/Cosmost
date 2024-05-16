@@ -25,11 +25,15 @@ import passport from "passport";
 import postInteraction from "../controllers/likePost.js";
 import Notifications from "../models/MongoDB/Collections/Schemas/Notifications.js";
 import friendRequests from "../models/MongoDB/Collections/Schemas/FriendRequests.js";
-import { upload } from "../server.js";
 import matchingDataFromDifferentIds from "../controllers/matchingDataFromDifferentIds.js";
 import Messages from "../models/MongoDB/Collections/Schemas/Messages.js";
 import Rooms from "../models/MongoDB/Collections/Schemas/Rooms.js";
 import { generateToken } from "../helpers/tokenServices.js";
+import envAdapter from "../helpers/envAdapter.js";
+
+envAdapter();
+
+const { SOCKET_ORIGIN } = process.env;
 
 const usersRouteData = {
   get: {
@@ -131,7 +135,9 @@ const pollsPostsRouteData = differentSchemas.map((schema, i) => {
             ]
           : [
               authMiddleware,
-              i !== 4 && i !== 5 ? paramsMiddleware : (req, res, next) => next(),
+              i !== 4 && i !== 5
+                ? paramsMiddleware
+                : (req, res, next) => next(),
               matchingDataFromDifferentIds(
                 i === 5 ? Rooms : Messages,
                 i === 5 ? "roomId" : "messageId",
@@ -230,7 +236,7 @@ const authRouteData = {
       [passport.authenticate("google", { scope: ["profile", "email"] })],
       [
         passport.authenticate("google", {
-          successRedirect: "http://localhost:5173",
+          successRedirect: SOCKET_ORIGIN,
           failureRedirect: "/login",
         }),
       ],
