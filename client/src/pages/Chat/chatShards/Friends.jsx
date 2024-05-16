@@ -52,7 +52,7 @@ const Friends = ({ whichToShow, classes, userPayload, handleUserData }) => {
         Total: {myData?.length}
       </p>
       <div className={`grid h-[100%] my-4 grid-cols-2 ${grid()} animate-pulse`}>
-        {myData?.map((data, i) => {
+        {myData && myData?.map((data, i) => {
           return (
             <div
               onClick={() => handleUserInteractions(i)}
