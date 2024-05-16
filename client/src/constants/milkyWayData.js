@@ -3,13 +3,13 @@ import Login from "../assets/bgPages/Login.png";
 const milkyWayData = {
   roles: {
     Always: {
-      titles: ["Shop", "Feed", "About"],
-      icons: ["FaShoppingCart", "BsFilePost", "IoInformationCircleSharp"],
+      titles: ["About"],
+      icons: ["IoInformationCircleSharp"],
       bgs: ["", "", ""],
     },
     loggedIn: {
-      titles: ["Profile", "Chat", "Feasts"],
-      icons: ["AiFillProfile", "LuMessagesSquare", "GiOpenTreasureChest"],
+      titles: ["Profile", "Chat", "Feasts", "Shop", "Feed"],
+      icons: ["AiFillProfile", "LuMessagesSquare", "GiOpenTreasureChest", "FaShoppingCart", "BsFilePost"],
       bgs: ["", ""],
     },
     Ghost: {
