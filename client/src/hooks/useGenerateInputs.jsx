@@ -163,7 +163,7 @@ const useGenerateInputs = ({
                           : anyAdditional.classes
                       } gap-4 ${i === 0 ? "p-4" : ""}`}
                     >
-                      <h1 className="tShadow text-3xl lg:text-8xl">{titles[i]}</h1>
+                      <h1 className="tShadow text-3xl lg:text-4xl">{titles[i]}</h1>
                       <input
                         value={value}
                         onChange={(e) => handleInputs(e, key)}

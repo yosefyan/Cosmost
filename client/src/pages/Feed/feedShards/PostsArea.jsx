@@ -67,7 +67,7 @@ const PostsArea = ({ profileButtonIndex, setProfileButtonIndex }) => {
           gradientColors.PRIMARY
         )} gradient-to-l py-4 opacity-80 tracking-[2rem] animate-pulse rounded-full ${
           textColors.PRIMARY
-        } tShadow ${titleStyles("text-8xl")} `}
+        } tShadow ${titleStyles("text-4xl")} `}
       >
         FEED
       </h1>

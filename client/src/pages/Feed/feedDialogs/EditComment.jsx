@@ -24,7 +24,7 @@ const EditComment = ({ handleSpecificClose, specialData = false }) => {
     }),
     initialRequest: false,
     eachContainer: `w-full h-full downUp bg-black/60 rounded-b-[25%] ${centerItem()} ${titleStyles(
-      "text-8xl"
+      "text-4xl"
     )} ${textColors.PRIMARY} m-4`,
     fullContainer: `h-[85%] ${centerItem()} overflow-y-scroll`,
   });
