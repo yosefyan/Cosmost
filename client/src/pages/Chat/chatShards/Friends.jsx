@@ -54,7 +54,7 @@ const Friends = ({ whichToShow, classes, userPayload, handleUserData }) => {
           return (
             <div
               onClick={() => handleUserInteractions(i)}
-              className={`w-1/3 h-1/3 p-4 ${centerItem()} cursor-pointer`}
+              className={`w-[80%] h-[80%] lg:w-1/3 lg:h-[70%] p-4 ${centerItem()} cursor-pointer`}
             >
               <div
                 className={`h-full rotateSpace tracking-[.2rem] border-b-[1rem] ${

@@ -181,7 +181,7 @@ const CartDialog = () => {
                     ) : index <= 3 ? (
                       <p
                         className={`w-full ${titleStyles(
-                          value.length > 5 ? "text-2xl" : "text-4xl"
+                          value.length > 5 ? "text-[1rem]" : "text-[1.5rem]"
                         )} ${
                           index === 1 || index === 2
                             ? ` h-full ${centerItem()}  ${

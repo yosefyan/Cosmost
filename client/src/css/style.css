@@ -629,8 +629,8 @@
 }
 
 .portal img {
-  width: 45rem;
-  height: 70%;
+  width: 100vmin;
+  height: 100vmin;
   filter: drop-shadow(0 0 10vmin white);
   animation: grow 6s linear 1, portalRotate 0.3s linear infinite;
   outline: 3px solid rgba(255, 255, 255, 0.479);

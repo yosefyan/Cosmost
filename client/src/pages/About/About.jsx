@@ -21,7 +21,7 @@ const About = () => {
       )}`}
     >
       <div
-        className={`w-full h-full h-[70%] ${centerItem(
+        className={`w-full h-full h-[70%] display-initial lg:${centerItem(
           "justify-evenly"
         )} flex-col`}
       >
