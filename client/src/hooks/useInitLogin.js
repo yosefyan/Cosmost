@@ -18,6 +18,7 @@ const useInitLogin = () => {
 
   useEffect(() => {
     try {
+      console.log('didgooglelogin', didGoogleLogin)
       if (didGoogleLogin) {
         const getGoogleUser = async () => {
           const res = await dynamicAxiosMethod({
