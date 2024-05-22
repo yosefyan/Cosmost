@@ -49,6 +49,7 @@ const useInitLogin = () => {
         localStorage.setItem("token", res.data);
       };
       getGoogleUser();
+      setFinishedLoading(true);
       return;
     }
     try {
