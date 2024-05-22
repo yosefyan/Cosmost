@@ -13,34 +13,25 @@ const useInitLogin = () => {
   const [finishedLoading, setFinishedLoading] = useState(false);
   const dynamicDispatch = useDynamicDispatch();
   const token = localStorage.getItem("token");
-  const didGoogleLogin = localStorage.getItem("didGoogleLogin");
-  console.log('useinit didgooglelogin', didGoogleLogin)
 
   useEffect(() => {
     try {
-      if (didGoogleLogin) {
-        const getGoogleUser = async () => {
-          const res = await dynamicAxiosMethod({
-            method: "get",
-            endpoint: "/success",
-            instance: authInstance,
-          });
-          localStorage.setItem("token", res.data);
-          setFinishedLoading(true);
-        };
-        getGoogleUser();
-      }
+      const getGoogleUser = async () => {
+        const res = await dynamicAxiosMethod({
+          method: "get",
+          endpoint: "/success",
+          instance: authInstance,
+        });
+        localStorage.setItem("token", res.data);
+      };
+      getGoogleUser();
     } catch (error) {
       console.error("Error fetching Google user:", error);
     }
   }, []);
 
   useEffect(() => {
-    if (!token) {
-      setFinishedLoading(true);
-      return;
-    }
-    if (didGoogleLogin) {
+    if (!token || localStorage.getItem("didGoogleLogin")) {
       const getGoogleUser = async () => {
         const res = await dynamicAxiosMethod({
           method: "get",
