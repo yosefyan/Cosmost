@@ -12,7 +12,7 @@ const useInitLogin = () => {
   const navigate = useNavigate();
   const [finishedLoading, setFinishedLoading] = useState(false);
   const dynamicDispatch = useDynamicDispatch();
-  const token = localStorage.getItem('token')
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     try {
