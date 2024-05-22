@@ -31,9 +31,10 @@ const authReducer = (state = initialState, action) => {
         },
       };
     case "GOOGLE_LOGIN_TOGGLE":
+      const { didGoogleLogin } = action.payload;
       return {
         ...state,
-        didGoogleLogin: action.payload,
+        didGoogleLogin,
       };
     default:
       return state;
