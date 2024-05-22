@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   const { userPayload } = useSelector((state) => state.authReducer);
+  localStorage.removeItem("didGoogleLogin");
   console.log("didgooglelogin", localStorage.getItem("didGoogleLogin"));
   const handleLogout = () => {
     localStorage.removeItem("token");
