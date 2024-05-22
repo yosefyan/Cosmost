@@ -256,6 +256,7 @@ const authRouteData = {
           if (user) {
             const { _id, isAdmin, userData, moneyData, ownedStuff } =
               filteredResults[0]?.user;
+              console.log('userData', userData)
             const { Profile_Picture, Alt, Rank, Username } = userData;
 
             const generatedToken = await generateToken({
