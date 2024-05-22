@@ -247,8 +247,10 @@ const authRouteData = {
             return sessionData.passport;
           });
 
-          const user = (await result[0]?.user) || (await result[1]?.user);
+          console.log("resultUser", result);
 
+          const user = (await result[0]?.user) || (await result[1]?.user);
+          console.log("user", user);
           if (user) {
             const { _id, isAdmin, userData, moneyData, ownedStuff } =
               result[0]?.user;
@@ -264,6 +266,7 @@ const authRouteData = {
               moneyData,
               ownedStuff,
             });
+            console.log("generatedToken", generatedToken);
             return res.json(generatedToken);
           }
         },
