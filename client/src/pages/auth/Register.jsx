@@ -18,7 +18,6 @@ const Register = () => {
       endpoint: "/users/register",
       specificInputs: {
         Rank: "Cosmic",
-        isAdmin: false,
         moneyData: { coins: 250, gems: 500 },
         ownedStuff: {
           titles: [],
