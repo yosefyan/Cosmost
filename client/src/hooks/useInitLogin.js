@@ -18,16 +18,18 @@ const useInitLogin = () => {
 
   useEffect(() => {
     try {
-      const getGoogleUser = async () => {
-        const res = await dynamicAxiosMethod({
-          method: "get",
-          endpoint: "/success",
-          instance: authInstance,
-        });
-        localStorage.setItem("token", res.data);
-        setFinishedLoading(true);
-      };
-      getGoogleUser();
+      if (didGoogleLogin) {
+        const getGoogleUser = async () => {
+          const res = await dynamicAxiosMethod({
+            method: "get",
+            endpoint: "/success",
+            instance: authInstance,
+          });
+          localStorage.setItem("token", res.data);
+          setFinishedLoading(true);
+        };
+        getGoogleUser();
+      }
     } catch (error) {
       console.error("Error fetching Google user:", error);
     }
