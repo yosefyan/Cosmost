@@ -23,6 +23,7 @@ const useInitLogin = () => {
           instance: authInstance,
         });
         localStorage.setItem("token", res.data);
+        setFinishedLoading(true);
       };
       getGoogleUser();
     } catch (error) {
