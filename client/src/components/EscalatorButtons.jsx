@@ -7,6 +7,7 @@ import dynamicAxiosMethod from "../helpers/dynamicAxiosMethod.js";
 import normalizeData from "../utils/normalizeData.js";
 import { useNavigate } from "react-router-dom";
 import { uploadInstance } from "../utils/axiosSetup.js";
+import useDynamicDispatch from "../hooks/useDynamicDispatch.js";
 
 const EscalatorButtons = ({
   container,
@@ -24,7 +25,7 @@ const EscalatorButtons = ({
     userPayload: state.authReducer.userPayload,
     errors: state.globalReducer.errors,
   }));
-
+  const dynamicDispatch = useDynamicDispatch();
   const navigate = useNavigate();
   const {
     method,
@@ -113,6 +114,7 @@ const EscalatorButtons = ({
               : { ...secondReq.innerData },
           });
         }
+        dynamicDispatch("GOOGLE_LOGIN_TOGGLE", { didGoogleLogin: false });
         clearInputs();
         endpoint.includes("login") && localStorage.setItem("token", res.data);
         toastifyHelper({ status, message });

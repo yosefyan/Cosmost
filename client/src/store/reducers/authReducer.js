@@ -3,6 +3,7 @@ import milkyWayData from "../../constants/milkyWayData";
 const initialState = {
   role: "Ghost",
   userPayload: null,
+  didGoogleLogin: false,
   isAdmin: false,
   data: {
     rolesData: [
@@ -29,7 +30,11 @@ const authReducer = (state = initialState, action) => {
           iconsData: [...milkyWayData.roles.Always.icons, ...data.iconsData],
         },
       };
-
+    case "GOOGLE_LOGIN_TOGGLE":
+      return {
+        ...state,
+        didGoogleLogin: action.payload,
+      };
     default:
       return state;
   }

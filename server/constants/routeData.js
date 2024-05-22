@@ -249,14 +249,10 @@ const authRouteData = {
 
           const filteredResults = result.filter((res) => res !== undefined);
 
-          console.log("resultUser", filteredResults);
-
           const user = await filteredResults[0]?.user;
-          console.log("user", user);
           if (user) {
             const { _id, isAdmin, userData, moneyData, ownedStuff } =
               filteredResults[0]?.user;
-              console.log('userData', userData)
             const { Profile_Picture, Alt, Rank, Username } = userData;
 
             const generatedToken = await generateToken({
@@ -269,7 +265,6 @@ const authRouteData = {
               moneyData,
               ownedStuff,
             });
-            console.log("generatedToken", generatedToken);
             return res.json(generatedToken);
           }
         },
