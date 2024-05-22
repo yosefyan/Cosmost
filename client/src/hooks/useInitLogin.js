@@ -14,6 +14,7 @@ const useInitLogin = () => {
   const dynamicDispatch = useDynamicDispatch();
   const token = localStorage.getItem("token");
   const didGoogleLogin = localStorage.getItem("didGoogleLogin");
+  console.log('useinit didgooglelogin', didGoogleLogin)
 
   useEffect(() => {
     try {
