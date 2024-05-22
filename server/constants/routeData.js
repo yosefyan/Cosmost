@@ -247,13 +247,15 @@ const authRouteData = {
             return sessionData.passport;
           });
 
-          console.log("resultUser", result);
+          const filteredResults = result.filter((res) => res !== undefined);
 
-          const user = (await result[0]?.user) || (await result[1]?.user);
+          console.log("resultUser", filteredResults);
+
+          const user = await filteredResults[0]?.user;
           console.log("user", user);
           if (user) {
             const { _id, isAdmin, userData, moneyData, ownedStuff } =
-              result[0]?.user;
+              filteredResults[0]?.user;
             const { Profile_Picture, Alt, Rank, Username } = userData;
 
             const generatedToken = await generateToken({
