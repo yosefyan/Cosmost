@@ -31,6 +31,7 @@ const useInitLogin = () => {
   }, []);
 
   useEffect(() => {
+    console.log("didgooglelogin", localStorage.getItem("didGoogleLogin"));
     if (!token || localStorage.getItem("didGoogleLogin")) {
       const getGoogleUser = async () => {
         const res = await dynamicAxiosMethod({
@@ -39,9 +40,9 @@ const useInitLogin = () => {
           instance: authInstance,
         });
         localStorage.setItem("token", res.data);
+        setFinishedLoading(true);
       };
       getGoogleUser();
-      setFinishedLoading(true);
       return;
     }
     try {
