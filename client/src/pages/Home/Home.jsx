@@ -11,12 +11,10 @@ import {
   textColors,
 } from "../../constants/colorsData";
 import { useNavigate } from "react-router-dom";
-import useInitLogin from "../../hooks/useInitLogin";
 
 const Home = () => {
   const navigate = useNavigate();
   const { userPayload } = useSelector((state) => state.authReducer);
-  const { finishedLoading } = useInitLogin();
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -31,7 +29,7 @@ const Home = () => {
       <div
         className={`w-full h-full overflow-scroll lg:overflow-hidden absolute bg-stars-pattern opacity-50`}
       ></div>
-      {userPayload && finishedLoading && (
+      {userPayload && (
         <div
           onClick={handleLogout}
           className={`${bgColors.SECONDARY} ${centerItem()} ${titleStyles(
