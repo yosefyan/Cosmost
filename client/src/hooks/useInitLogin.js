@@ -7,18 +7,16 @@ import { useNavigate } from "react-router-dom";
 import toastifyHelper, { toastifyStatuses } from "../helpers/toastifyHelper";
 import useDynamicDispatch from "./useDynamicDispatch";
 import { authInstance } from "../utils/axiosSetup";
-import { useSelector } from "react-redux";
 
 const useInitLogin = () => {
   const navigate = useNavigate();
   const [finishedLoading, setFinishedLoading] = useState(false);
   const dynamicDispatch = useDynamicDispatch();
-  const { didGoogleLogin } = useSelector((state) => state.authReducer);
   const token = localStorage.getItem("token");
+  const didGoogleLogin = localStorage.getItem("didGoogleLogin");
 
   useEffect(() => {
     try {
-      console.log('didgooglelogin', didGoogleLogin)
       if (didGoogleLogin) {
         const getGoogleUser = async () => {
           const res = await dynamicAxiosMethod({
@@ -51,7 +49,6 @@ const useInitLogin = () => {
         localStorage.setItem("token", res.data);
       };
       getGoogleUser();
-      setFinishedLoading(true);
       return;
     }
     try {

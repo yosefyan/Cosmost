@@ -9,10 +9,8 @@ import useFormValidation from "../../hooks/useFormValidation";
 import { emailPasswordSettings } from "../../constants/validationData";
 import PortalNav from "../../components/PortalNav";
 import { toastifyStatuses } from "../../helpers/toastifyHelper";
-import useDynamicDispatch from "../../hooks/useDynamicDispatch";
 
 const Login = () => {
-  const dynamicDispatch = useDynamicDispatch();
   const { inputs, data } = useGenerateInputs({
     array: ["Email", "Password"],
     titles: ["Let's go on,", "Click on the hash to reveal/hide."],
@@ -49,7 +47,7 @@ const Login = () => {
     import.meta.env.VITE_SERVER_URL || "https://cosmost.onrender.com";
 
   const handleGoogleLogin = () => {
-    dynamicDispatch("GOOGLE_LOGIN_TOGGLE", { didGoogleLogin: true });
+    localStorage.setItem('didGoogleLogin', true)
     window.location.href = `${baseURL}/auth/google`;
   };
 
