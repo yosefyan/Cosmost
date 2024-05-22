@@ -18,7 +18,6 @@ const Home = () => {
   const { finishedLoading } = useInitLogin();
   const { userPayload } = useSelector((state) => state.authReducer);
 
-  console.log("didgooglelogin", localStorage.getItem("didGoogleLogin"));
   const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/login");
