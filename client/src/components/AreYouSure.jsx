@@ -37,7 +37,7 @@ const AreYouSure = ({ shouldAddDialog, handleStatus, classes }) => {
       >
         Are you sure?
       </h1>
-      <div className={`w-[80%] h-[80%] lg:h-[30%] ${centerItem("justify-evenly")} flex-col lg:flex-row`}>
+      <div className={`w-full h-[80%] lg:h-[30%] ${centerItem("justify-evenly")} flex-col lg:flex-row`}>
         {areYouSureData.icons.map((Icon, i) => {
           return (
             <div
