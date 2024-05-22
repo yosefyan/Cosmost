@@ -23,8 +23,10 @@ const useInitLogin = () => {
           instance: authInstance,
         });
         localStorage.setItem("token", res.data);
+        setFinishedLoading(true);
       };
       getGoogleUser();
+      
     } catch (error) {
       console.error("Error fetching Google user:", error);
     }
@@ -39,9 +41,9 @@ const useInitLogin = () => {
           instance: authInstance,
         });
         localStorage.setItem("token", res.data);
+        setFinishedLoading(true);
       };
       getGoogleUser();
-      setFinishedLoading(true);
       return;
     }
     try {
