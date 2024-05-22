@@ -7,33 +7,38 @@ import { useNavigate } from "react-router-dom";
 import toastifyHelper, { toastifyStatuses } from "../helpers/toastifyHelper";
 import useDynamicDispatch from "./useDynamicDispatch";
 import { authInstance } from "../utils/axiosSetup";
+import { useSelector } from "react-redux";
 
 const useInitLogin = () => {
   const navigate = useNavigate();
   const [finishedLoading, setFinishedLoading] = useState(false);
   const dynamicDispatch = useDynamicDispatch();
+  const { didGoogleLogin } = useSelector((state) => state.authReducer);
   const token = localStorage.getItem("token");
 
-  useEffect(() => {
-    try {
-      const getGoogleUser = async () => {
-        const res = await dynamicAxiosMethod({
-          method: "get",
-          endpoint: "/success",
-          instance: authInstance,
-        });
-        localStorage.setItem("token", res.data);
-        setFinishedLoading(true);
-      };
-      getGoogleUser();
-      
-    } catch (error) {
-      console.error("Error fetching Google user:", error);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     const getGoogleUser = async () => {
+  //       const res = await dynamicAxiosMethod({
+  //         method: "get",
+  //         endpoint: "/success",
+  //         instance: authInstance,
+  //       });
+  //       localStorage.setItem("token", res.data);
+  //       setFinishedLoading(true);
+  //     };
+  //     getGoogleUser();
+  //   } catch (error) {
+  //     console.error("Error fetching Google user:", error);
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (!token) {
+      setFinishedLoading(true);
+      return;
+    }
+    if (didGoogleLogin) {
       const getGoogleUser = async () => {
         const res = await dynamicAxiosMethod({
           method: "get",
@@ -41,9 +46,9 @@ const useInitLogin = () => {
           instance: authInstance,
         });
         localStorage.setItem("token", res.data);
-        setFinishedLoading(true);
       };
       getGoogleUser();
+      setFinishedLoading(true);
       return;
     }
     try {
