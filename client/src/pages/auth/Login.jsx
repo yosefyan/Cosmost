@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { centerItem, gradient, titleStyles } from "../../utils/utils";
 import { gradientColors, textColors } from "../../constants/colorsData";
 import useGenerateInputs from "../../hooks/useGenerateInputs";
@@ -43,11 +43,20 @@ const Login = () => {
     },
   });
 
+  useEffect(() => {
+    const didGoogleLogin = localStorage.getItem("didGoogleLogin");
+    const token = localStorage.getItem("token");
+    console.log(didGoogleLogin, token)
+    if (!token && didGoogleLogin) {
+      localStorage.removeItem("didGoogleLogin");
+    }
+  }, []);
+
   const baseURL =
     import.meta.env.VITE_SERVER_URL || "https://cosmost.onrender.com";
 
   const handleGoogleLogin = () => {
-    localStorage.setItem('didGoogleLogin', true)
+    localStorage.setItem("didGoogleLogin", true);
     window.location.href = `${baseURL}/auth/google`;
   };
 

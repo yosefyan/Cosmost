@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MilkyWay from "./homeShards/MilkyWay";
 import { centerItem, gradient, titleStyles } from "../../utils/utils";
 import Settings from "../../components/Settings";
@@ -17,6 +17,15 @@ const Home = () => {
   const navigate = useNavigate();
   const { finishedLoading } = useInitLogin();
   const { userPayload } = useSelector((state) => state.authReducer);
+
+  useEffect(() => {
+    const didGoogleLogin = localStorage.getItem("didGoogleLogin");
+    const token = localStorage.getItem("token");
+    console.log(didGoogleLogin, token)
+    if (!token && didGoogleLogin) {
+      localStorage.removeItem("didGoogleLogin");
+    }
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
