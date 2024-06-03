@@ -259,21 +259,25 @@ const authRouteData = {
               value: user.email,
             });
             console.log("googleUser", googleUser);
-            const { _id, isAdmin, userData, moneyData, ownedStuff } =
-              await googleUser[0];
+            if (googleUser) {
+              const { _id, isAdmin, userData, moneyData, ownedStuff } =
+                await googleUser[0];
 
-            const { Profile_Picture, Alt, Rank, Username } = userData;
-            const generatedToken = await generateToken({
-              _id,
-              isAdmin,
-              Rank,
-              Username,
-              Profile_Picture,
-              Alt,
-              moneyData,
-              ownedStuff,
-            });
-            return res.json(generatedToken);
+              const { Profile_Picture, Alt, Rank, Username } = userData;
+              const generatedToken = await generateToken({
+                _id,
+                isAdmin,
+                Rank,
+                Username,
+                Profile_Picture,
+                Alt,
+                moneyData,
+                ownedStuff,
+              });
+              return res.json(generatedToken);
+            } else {
+              console.log('error with googleUser')
+            }
           }
         },
       ],
