@@ -50,6 +50,8 @@ const Login = () => {
     if (!token && didGoogleLogin) {
       localStorage.removeItem("didGoogleLogin");
     }
+    localStorage.removeItem("token");
+    localStorage.removeItem("didGoogleLogin");
   }, []);
 
   const baseURL =
