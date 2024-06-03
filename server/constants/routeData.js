@@ -250,34 +250,29 @@ const authRouteData = {
           });
 
           const filteredResults = result.filter((res) => res !== undefined);
-
+        
           const user = await filteredResults[0]?.user;
           if (user) {
             const googleUser = await getInstance({
               collectionType: User,
               identifier: "Email",
-              value: user.email,
+              value: user.Email,
             });
-            console.log("googleUser", googleUser);
-            if (googleUser) {
-              const { isAdmin, userData, moneyData, ownedStuff } =
-                await googleUser[0];
+            const { _id, isAdmin, userData, moneyData, ownedStuff } = await
+              googleUser[0];
 
-              const { Profile_Picture, Alt, Rank, Username } = userData;
-              const generatedToken = await generateToken({
-                _id: googleUser[0]?._id,
-                isAdmin,
-                Rank,
-                Username,
-                Profile_Picture,
-                Alt,
-                moneyData,
-                ownedStuff,
-              });
-              return res.json(generatedToken);
-            } else {
-              console.log('error with googleUser')
-            }
+            const { Profile_Picture, Alt, Rank, Username } = userData;
+            const generatedToken = await generateToken({
+              _id,
+              isAdmin,
+              Rank,
+              Username,
+              Profile_Picture,
+              Alt,
+              moneyData,
+              ownedStuff,
+            });
+            return res.json(generatedToken);
           }
         },
       ],
