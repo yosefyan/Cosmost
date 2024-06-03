@@ -260,12 +260,12 @@ const authRouteData = {
             });
             console.log("googleUser", googleUser);
             if (googleUser) {
-              const { _id, isAdmin, userData, moneyData, ownedStuff } =
+              const { isAdmin, userData, moneyData, ownedStuff } =
                 await googleUser[0];
 
               const { Profile_Picture, Alt, Rank, Username } = userData;
               const generatedToken = await generateToken({
-                _id,
+                _id: googleUser[0]?._id,
                 isAdmin,
                 Rank,
                 Username,
