@@ -46,7 +46,7 @@ const Login = () => {
   useEffect(() => {
     const didGoogleLogin = localStorage.getItem("didGoogleLogin");
     const token = localStorage.getItem("token");
-    console.log(didGoogleLogin, token)
+   
     if (!token && didGoogleLogin) {
       localStorage.removeItem("didGoogleLogin");
     }
