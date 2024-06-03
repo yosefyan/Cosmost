@@ -35,20 +35,25 @@ const useInitLogin = () => {
   }, []);
 
   useEffect(() => {
-    if (!token) {
-      const getGoogleUser = async () => {
-        const res = await dynamicAxiosMethod({
-          method: "get",
-          endpoint: "/success",
-          instance: authInstance,
-        });
-        localStorage.setItem("token", res.data);
-        setFinishedLoading(true);
-      };
-      getGoogleUser();
-      return;
-    }
     try {
+      if (!token && didGoogleLogin) {
+        const getGoogleUser = async () => {
+          try {
+            const res = await dynamicAxiosMethod({
+              method: "get",
+              endpoint: "/success",
+              instance: authInstance,
+            });
+            localStorage.setItem("token", res.data);
+            setFinishedLoading(true);
+          } catch (error) {
+            console.log("???", error);
+            setFinishedLoading(true);
+          }
+        };
+        getGoogleUser();
+        return;
+      }
       const decodedToken = jwtDecode(token);
       if (!decodedToken || !decodedToken._id) {
         setFinishedLoading(true);

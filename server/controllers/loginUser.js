@@ -1,3 +1,4 @@
+import { defaultUser } from "../constants/alternativePhotos.js";
 import { compareHash } from "../helpers/bcryptServices.js";
 import errorCreater from "../helpers/errorCreater.js";
 import { generateToken } from "../helpers/tokenServices.js";
@@ -25,14 +26,14 @@ const loginUser = async (req, res) => {
     if (!isPasswordMatching) throw new Error("Invalid email or password.");
 
     const { _id, isAdmin, userData, moneyData, ownedStuff } = userFromDB[0];
-    const { Profile_Picture, Alt, Rank, Username } = userData;
+    const { Alt, Rank, Username } = userData;
     const generatedToken = await generateToken({
       _id,
       isAdmin,
       Rank,
       Username,
-      Profile_Picture,
-      Alt,
+      Profile_Picture: userData?.Profile_Picture || defaultUser,
+      Alt: userData?.Alt || "Profile Picture",
       moneyData,
       ownedStuff,
     });

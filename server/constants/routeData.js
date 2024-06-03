@@ -30,6 +30,7 @@ import Messages from "../models/MongoDB/Collections/Schemas/Messages.js";
 import Rooms from "../models/MongoDB/Collections/Schemas/Rooms.js";
 import { generateToken } from "../helpers/tokenServices.js";
 import envAdapter from "../helpers/envAdapter.js";
+import { defaultUser } from "./alternativePhotos.js";
 
 envAdapter();
 
@@ -253,15 +254,15 @@ const authRouteData = {
           if (user) {
             const { _id, isAdmin, userData, moneyData, ownedStuff } =
               filteredResults[0]?.user;
-            const { Profile_Picture, Alt, Rank, Username } = userData;
+            const { Username } = userData;
 
             const generatedToken = await generateToken({
               _id,
               isAdmin,
-              Rank,
+              Rank: userData?.Rank || "Normal",
               Username,
-              Profile_Picture,
-              Alt,
+              Profile_Picture: userData?.Profile_Picture || defaultUser,
+              Alt: userData?.Alt || "Profile Picture",
               moneyData,
               ownedStuff,
             });
