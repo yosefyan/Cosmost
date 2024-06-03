@@ -30,6 +30,7 @@ const useInitLogin = () => {
         getGoogleUser();
       }
     } catch (error) {
+      setFinishedLoading(true);
       console.error("Error fetching Google user:", error);
     }
   }, []);
@@ -47,7 +48,6 @@ const useInitLogin = () => {
             localStorage.setItem("token", res.data);
             setFinishedLoading(true);
           } catch (error) {
-            console.log("???", error);
             setFinishedLoading(true);
           }
         };
