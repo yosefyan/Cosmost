@@ -253,12 +253,12 @@ const authRouteData = {
 
           const user = await filteredResults[0]?.user;
           if (user) {
-            console.log("user", user);
             const googleUser = await getInstance({
               collectionType: User,
               identifier: "Email",
               value: user.email,
             });
+            console.log("googleUser", googleUser);
             const { _id, isAdmin, userData, moneyData, ownedStuff } =
               await googleUser[0];
 
