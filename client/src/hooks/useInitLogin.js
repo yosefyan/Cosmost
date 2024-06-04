@@ -107,14 +107,14 @@ const useInitLogin = () => {
           });
         } catch (error) {
           navigate("/login");
+          localStorage.removeItem('token');
+          localStorage.removeItem('didGoogleLogin');
           toastifyHelper({
             status: toastifyStatuses.error,
             message: "Could not find user, please login.",
           });
           setFinishedLoading(true);
         } finally {
-          localStorage.removeItem('token');
-          localStorage.removeItem('didGoogleLogin');
           setFinishedLoading(true);
         }
       };
