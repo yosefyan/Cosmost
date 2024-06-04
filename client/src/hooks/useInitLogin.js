@@ -113,6 +113,8 @@ const useInitLogin = () => {
           });
           setFinishedLoading(true);
         } finally {
+          localStorage.removeItem('token');
+          localStorage.removeItem('didGoogleLogin');
           setFinishedLoading(true);
         }
       };
