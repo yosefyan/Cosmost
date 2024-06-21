@@ -21,7 +21,7 @@ function MuseumGlass({ data, classes }) {
         <div className={`lasers absolute w-full h-full ${centerItem()}`}>
           {shopData.shopDialog.museumData.lasers.map((laser, index) => {
             return (
-              <p className="w-full h-full" key={index}>
+              <p className="w-full h-full" key={`shopDataShopDialogMuseumDataLasersMuseumGlass${index}`}>
                 {laser}
               </p>
             );
@@ -33,7 +33,7 @@ function MuseumGlass({ data, classes }) {
           return (
             <p
               className={`w-[20%] primaryGradient bRadius relative ${centerItem()}`}
-              key={index}
+              key={`shopDataShopDialogMuseumDataTablePartsMuseumGlass${index}`}
             >
               {table}
               {index === 1 && (

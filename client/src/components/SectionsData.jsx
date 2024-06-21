@@ -115,6 +115,7 @@ const SectionsData = ({ endPointsArray, specialTitle = "", postKind }) => {
         {feedData.ViewFeedDialogButtons.map((titleButton, postIndex) => {
           return (
             <a
+              key={`feedDataViewFeedDialogButtons${postIndex}`}
               onClick={() => setSelectedToDisplay(postIndex)}
               className={`w-full ${bgColors.TERTIARY} h-full ${centerItem()} ${
                 postIndex === selectedToDisplay

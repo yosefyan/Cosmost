@@ -41,6 +41,7 @@ const NotificationsData = ({ handleSpecificClose }) => {
           const hours = date.getHours() % 24 || 12;
           return (
             <div
+              key={`notiMessageNotificationsData${i}`}
               className={`w-[80%] h-[30%] ${
                 whichAction === "like"
                   ? "border-b-red-500"

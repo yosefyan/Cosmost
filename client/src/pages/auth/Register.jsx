@@ -46,6 +46,7 @@ const Register = () => {
       ...emailPasswordSettings,
       Repeat_Password: emailPasswordSettings.Password,
       Profile_Picture: { type: "url" },
+      Date_Of_Birth: { type: "date" },
       Username: { min: 1 },
       Bio: { min: 15 },
     },

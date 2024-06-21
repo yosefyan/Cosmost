@@ -90,13 +90,15 @@ const ProfileNameTitle = ({
             {(userPayload._id === data.user_id || userPayload.isAdmin) &&
               inputsData.profileIcons.map((icon, i) => {
                 return (
-                  <IconComponent
-                    onClick={() => handleTopIcons(i)}
-                    classes={`${
-                      i === 0 ? textColors.PRIMARY : textColors.DENY
-                    } mr-4 p-3 cursor-pointer hover:bg-gray-500/10 rounded-full text-2xl`}
-                    Icon={iconsData[icon]}
-                  />
+                  <React.Fragment key={`inputsDataProfileIcons${i}`}>
+                    <IconComponent
+                      onClick={() => handleTopIcons(i)}
+                      classes={`${
+                        i === 0 ? textColors.PRIMARY : textColors.DENY
+                      } mr-4 p-3 cursor-pointer hover:bg-gray-500/10 rounded-full text-2xl`}
+                      Icon={iconsData[icon]}
+                    />
+                  </React.Fragment>
                 );
               })}
           </div>

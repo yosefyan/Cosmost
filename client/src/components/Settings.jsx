@@ -62,15 +62,6 @@ const Settings = () => {
           className={`w-full ${titleStyles("text-2xl")} ${textColors.PRIMARY}`}>
           Volume
         </p>
-        {/* <input
-          onChange={({ target }) => handleRange({ value: target.value })}
-          min={0}
-          max={100}
-          value={range}
-          type="range"
-          className="relative w-[70%]"
-          style={{ zIndex: 40 }}
-        /> */}
         <div className={`${centerItem("justify-between")} z-20 w-[70%]`}>
           {Object.values(settingsData.Volume).map((Icon, i) => {
             return (

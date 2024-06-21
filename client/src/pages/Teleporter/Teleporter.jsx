@@ -51,7 +51,7 @@ const Teleporter = () => {
         <Window handleName={handleName} role={"Home"} i={null} />
         {data.rolesData.map((role, i) => {
           return (
-            <React.Fragment key={`mirrosTeleporterData${i}`}>
+            <React.Fragment key={`mirrosTeleporterDataRolesData${i}`}>
               <Window handleName={handleName} role={role} i={i} />
             </React.Fragment>
           );

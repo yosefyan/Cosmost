@@ -44,12 +44,14 @@ const About = () => {
             <div className="w-[80%] h-full absolute rotateCircle rounded-full">
               {aboutData.planets.Icons.map((planet, i) => {
                 return (
-                  <IconComponent
-                    classes={`h-full  ${titleStyles(
-                      "text-6xl"
-                    )} blur-[4rem] text-white/70`}
-                    Icon={iconsData[planet]}
-                  />
+                  <React.Fragment key={`aboutDataPlanetsIcons${i}`}>
+                    <IconComponent
+                      classes={`h-full  ${titleStyles(
+                        "text-6xl"
+                      )} blur-[4rem] text-white/70`}
+                      Icon={iconsData[planet]}
+                    />
+                  </React.Fragment>
                 );
               })}
             </div>

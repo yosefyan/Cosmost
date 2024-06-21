@@ -151,6 +151,7 @@ const AddFriend = ({ classes, userPayload }) => {
             {usersData?.map((user, i) => {
               return (
                 <div
+                  key={`usersDataAddFriend${i}`}
                   className={`${centerItem()} rounded-[20px] ${
                     bgColors.SECONDARY
                   } shadow-[0_0_1rem_fuchsia]`}

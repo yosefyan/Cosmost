@@ -13,7 +13,7 @@ const Screen = ({ userData, handleIcons, whichToShow }) => {
   const containerToScroll = useRef(null);
   const [roomInfo, setRoomInfo] = useState([]);
   const baseURL =
-  import.meta.env.VITE_SERVER_URL || "https://cosmost.onrender.com";
+    import.meta.env.VITE_SERVER_URL || "https://cosmost.onrender.com";
   useEffect(() => {
     const newSocket = io(baseURL);
     setSocket(newSocket);
@@ -24,15 +24,22 @@ const Screen = ({ userData, handleIcons, whichToShow }) => {
   }, []);
 
   const handleRoomInfo = (data) => {
-    setRoomInfo(data)
-  }
+    setRoomInfo(data);
+  };
 
   const handleReceivedMessage = (data) => {
     setMessageReceived(data);
   };
 
   const htmlData = {
-    topPart: <ScreenTopPart handleIcons={handleIcons} socket={socket} iconsData={iconsData} userData={userData} />,
+    topPart: (
+      <ScreenTopPart
+        handleIcons={handleIcons}
+        socket={socket}
+        iconsData={iconsData}
+        userData={userData}
+      />
+    ),
     middlePart: (
       <ScreenMiddlePart
         socket={socket}
@@ -66,7 +73,10 @@ const Screen = ({ userData, handleIcons, whichToShow }) => {
       >
         {messagesData.screenParts.map((_, i) => {
           return (
-            <div className={`w-full ${i === 1 ? "h-[80%]" : "h-[10%]"}`}>
+            <div
+              key={`messagesDataScreenPartsScreen${i}`}
+              className={`w-full ${i === 1 ? "h-[80%]" : "h-[10%]"}`}
+            >
               {i === 0
                 ? htmlData.topPart
                 : i === 1

@@ -12,6 +12,7 @@ const CoinsGems = ({ classes, privateData, data, shouldExplain = true }) => {
       {shopData.topNav.icons.map((Icon, i) => {
         return (
           <div
+            key={`shopDataCoinsGemsTopNav${i}`}
             className={`${coinsGemsColors(i === 0 ? true : false)} ${
               classes
                 ? classes

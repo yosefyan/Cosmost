@@ -31,7 +31,9 @@ const MyProfile = ({
           onError={handleImageError}
           className={`${
             !imgSize ? "w-[35%]" : imgSize
-          } mt-2 opacity-70 shadow-2xl ${userPayload.isAdmin ? 'shadow-red-500' : 'shadow-cyan-500'} shadow-black rounded-[20px]`}
+          } mt-2 opacity-70 shadow-2xl ${
+            userPayload.isAdmin ? "shadow-red-500" : "shadow-cyan-500"
+          } shadow-black rounded-[20px]`}
           src={userPayload.Profile_Picture || defaultProfilePicture}
           alt="profile picture"
         />
@@ -56,11 +58,14 @@ const MyProfile = ({
             <IconComponent Icon={iconsData["FaUserFriends"]} />{" "}
             {userPayload?.Rank || "No Rank"}
           </h3>
-          {userPayload.isAdmin && <p className={`${textColors.DENY} text-2xl`}>Admin</p>}
+          {userPayload.isAdmin && (
+            <p className={`${textColors.DENY} text-2xl`}>Admin</p>
+          )}
         </div>
         <div className={`text-white/60 w-full h-[10%] overflow-y-scroll`}>
           {userPayload.ownedStuff.titles.map((title, i) => (
             <div
+              key={`userPayloadOnwedStuffTitles${i}`}
               className={`${centerItem()} text-4xl gap-4 bg-cyan-500/5 w-full h-full`}
             >
               <p className={`${gradient(true, gradientColors.PRIMARY)}`}>
@@ -79,6 +84,7 @@ const MyProfile = ({
             profileData.titles.map((title, i) => {
               return (
                 <div
+                  key={`profileDataTitles${i}`}
                   onClick={() => handleProfileButtons(i)}
                   className={`w-1/2 ${centerItem(
                     "justify-evenly"

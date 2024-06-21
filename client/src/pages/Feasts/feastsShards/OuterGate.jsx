@@ -12,6 +12,7 @@ const OuterGate = ({ feastsCategories, openDoor, handleOpenDoor }) => {
       {feastsCategories.map((_, i) => {
         return (
           <div
+            key={`feastsCategoriesOuterGate${i}`}
             style={
               openDoor
                 ? {

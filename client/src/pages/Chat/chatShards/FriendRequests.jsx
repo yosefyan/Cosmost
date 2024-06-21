@@ -49,21 +49,22 @@ const FriendRequests = ({ classes, whichToShow }) => {
             : "Added friend succesfully!",
       });
       setAcceptDenyTrigger((prevState) => !prevState);
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 
   const htmlData = (da) => (
     <div className={`flex-1 h-full ${centerItem("justify-end")}`}>
       {areYouSureData.icons.map((icon, i) => {
         return (
-          <IconComponent
-            onClick={() => handleAcceptDeny(i, da)}
-            classes={`text-5xl p-4 hover:bg-gray-500/10 rounded-full cursor-pointer text-end ${
-              textColors[i === 0 ? "DENY" : "ACCEPT"]
-            }`}
-            Icon={iconsData[icon]}
-          />
+          <React.Fragment key={`areYouSureDataIconsFriendRequests${i}`}>
+            <IconComponent
+              onClick={() => handleAcceptDeny(i, da)}
+              classes={`text-5xl p-4 hover:bg-gray-500/10 rounded-full cursor-pointer text-end ${
+                textColors[i === 0 ? "DENY" : "ACCEPT"]
+              }`}
+              Icon={iconsData[icon]}
+            />
+          </React.Fragment>
         );
       })}
     </div>
@@ -82,14 +83,19 @@ const FriendRequests = ({ classes, whichToShow }) => {
         You have {pendingData?.length} pending request/s!
       </p>
       {pendingData?.length > 0 ? (
-        pendingData?.map((da) => {
+        pendingData?.map((da, i) => {
           return (
             <div
+              key={`pendingDataFriendRequests${i}`}
               className={`w-full h-full bg-black/50 ${centerItem(
                 "justify-evenly"
               )} flex-col`}
             >
-              <ProfileNameTitle dataType={'friendRequest'} rightSideData={htmlData(da)} data={da} />
+              <ProfileNameTitle
+                dataType={"friendRequest"}
+                rightSideData={htmlData(da)}
+                data={da}
+              />
             </div>
           );
         })

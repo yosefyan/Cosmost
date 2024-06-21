@@ -30,7 +30,7 @@ const ScreenMiddlePart = ({
     if (userData.data) {
       const roomId = [userPayload._id, userData?.data[userData.i]?._id];
       const reversedRoomId = [userData?.data[userData.i]?._id, userPayload._id];
-      
+
       try {
         const getRelatedMessages = async () => {
           const theRoom = await neededRoom(
@@ -48,7 +48,7 @@ const ScreenMiddlePart = ({
               ""
             )}-${reversedRoomId.join("")}`,
           });
-          if (await res.status === 200) {
+          if ((await res.status) === 200) {
             setSocketMessages(res.data);
           } else {
             setSocketMessages([]);
@@ -112,6 +112,7 @@ const ScreenMiddlePart = ({
             const date = new Date(msg.createdAt);
             return (
               <div
+                key={`socketMessagesScreenMiddlePart${i}`}
                 className={`${centerItem(
                   "",
                   userPayload._id === msg.sender ? "items-end" : "items-start"

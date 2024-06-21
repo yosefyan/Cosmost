@@ -92,7 +92,7 @@ const PostsArea = ({ profileButtonIndex, setProfileButtonIndex }) => {
               )} text-white cursor-pointer flex-col w-[35%] ${titleStyles(
                 "text-1xl lg:text-2xl"
               )} p-4 rounded-[20px] ${bgColors.PRIMARY}`}
-              key={`postsKinds${i}`}
+              key={`postsKindsPostsArea${i}`}
             >
               <IconComponent
                 classes={"text-5xl"}

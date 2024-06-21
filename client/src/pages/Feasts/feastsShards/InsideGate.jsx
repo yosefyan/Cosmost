@@ -29,6 +29,7 @@ const InsideGate = ({
       {feastsCategories.map((_, i) => {
         return (
           <div
+            key={`feastsCategoriesInsideGate${i}`}
             className={`w-full lg:w-1/3 h-[100vh] lg:h-[70%] relative ${centerItem()}`}
           >
             {i === 1 ? (
@@ -55,6 +56,7 @@ const InsideGate = ({
                 </h1>
                 {Object.keys(userPayload.ownedStuff).map((key, i) => (
                   <p
+                    key={`userPayloadOwnedStuffInsideGate${i}`}
                     className={`w-[80%] h-[20%] ${
                       i === currentDisplay ? "shadow-[0_0_1rem_white]" : ""
                     } cursor-pointer hover:scale-95 transition-all p-8 lg:-p-0 text-gray-500 tShadow ${
@@ -77,13 +79,17 @@ const InsideGate = ({
                   shopData.sideNav.titles[currentDisplay].toLowerCase()
                 ].map((categ, i) => {
                   return (
-                    <IconComponent
-                      classes={`${colorKey(
-                        "Rarity",
-                        categ.topPart.Rarity
-                      )} text-5xl h-1/2 p-8 ${upDownIndex(i)}`}
-                      Icon={iconsData[categ.leftPart.imgSrc]}
-                    />
+                    <React.Fragment
+                      key={`shopData.sideNavTitlesCurrentDisplayInsideGate${i}`}
+                    >
+                      <IconComponent
+                        classes={`${colorKey(
+                          "Rarity",
+                          categ.topPart.Rarity
+                        )} text-5xl h-1/2 p-8 ${upDownIndex(i)}`}
+                        Icon={iconsData[categ.leftPart.imgSrc]}
+                      />
+                    </React.Fragment>
                   );
                 })}
                 <div

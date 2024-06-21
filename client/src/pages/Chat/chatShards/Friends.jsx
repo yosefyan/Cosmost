@@ -54,6 +54,7 @@ const Friends = ({ whichToShow, classes, userPayload, handleUserData }) => {
           myData?.map((data, i) => {
             return (
               <div
+                key={`myDataFriends${i}`}
                 onClick={() => handleUserInteractions(i)}
                 className={`w-[80%] h-[80%] lg:w-1/3 lg:h-[70%] p-4 ${centerItem()} cursor-pointer`}
               >

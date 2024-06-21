@@ -174,10 +174,12 @@ const CartDialog = () => {
                 return (
                   <>
                     {index === 0 ? (
-                      <IconComponent
-                        classes={`w-1/2 text-5xl h-full ${centerItem()} bg-black/75 text-white/50`}
-                        Icon={iconsData[cartData[i].leftPart.imgSrc]}
-                      />
+                      <React.Fragment key={`cartDialogCartData${index}`}>
+                        <IconComponent
+                          classes={`w-1/2 text-5xl h-full ${centerItem()} bg-black/75 text-white/50`}
+                          Icon={iconsData[cartData[i].leftPart.imgSrc]}
+                        />
+                      </React.Fragment>
                     ) : index <= 3 ? (
                       <p
                         className={`w-full ${titleStyles(
@@ -198,13 +200,15 @@ const CartDialog = () => {
                         {value}
                       </p>
                     ) : (
-                      <CoinsGems
-                        data={cart.bottomPart.coinsGems}
-                        classes={`w-full flex-col-reverse ${titleStyles(
-                          "text-[1.2rem]"
-                        )}`}
-                        shouldExplain={false}
-                      />
+                      <React.Fragment key={`cartDialogCoinsGems${index}`}>
+                        <CoinsGems
+                          data={cart.bottomPart.coinsGems}
+                          classes={`w-full flex-col-reverse ${titleStyles(
+                            "text-[1.2rem]"
+                          )}`}
+                          shouldExplain={false}
+                        />
+                      </React.Fragment>
                     )}
                   </>
                 );
@@ -250,7 +254,7 @@ const CartDialog = () => {
               whichAction: "toPurchase",
             })
           }
-          className={`${buttonStyles('text-1xl lg:text-2xl')} ${centerItem(
+          className={`${buttonStyles("text-1xl lg:text-2xl")} ${centerItem(
             "justify-evenly"
           )} w-[10%] lg:w-[70%] h-[80%] shadow-xl shadow-gray-500/50 ${
             bgColors[cartData.length > 0 ? "SECONDARY" : "TERTIARY"]

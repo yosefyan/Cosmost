@@ -82,17 +82,19 @@ const Admin = () => {
           </h1>
           {allUsers?.map((user, i) => {
             return (
-              <ProfileNameTitle
-                endpoint={{
-                  delete: `${`/users/deleteUser/${user._id}`} `,
-                  patch: `${`/users/patchUsername/${user._id}`}`,
-                }}
-                normalize={"EditUsername"}
-                index={i}
-                data={user}
-                neededIndex={2}
-                dataType={"updateUser"}
-              />
+              <React.Fragment key={`allUsersAdmin${i}`}>
+                <ProfileNameTitle
+                  endpoint={{
+                    delete: `${`/users/deleteUser/${user._id}`} `,
+                    patch: `${`/users/patchUsername/${user._id}`}`,
+                  }}
+                  normalize={"EditUsername"}
+                  index={i}
+                  data={user}
+                  neededIndex={2}
+                  dataType={"updateUser"}
+                />
+              </React.Fragment>
             );
           })}
         </div>

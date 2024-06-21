@@ -63,8 +63,7 @@ const CommentsData = ({
         message: "Created a comment succesfully!",
       });
       setSubmited((prev) => !prev);
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -105,23 +104,23 @@ const CommentsData = ({
           commentsData?.map((comment, i) => {
             return (
               <div
+                key={`commentsData${i}`}
                 className={`w-full ${
                   i % 2 === 0 ? bgColors.SECONDARY : bgColors.PRIMARY
                 } gap-4 flex-col relative rounded-[20px]`}
               >
-                
-                  <ProfileNameTitle
-                    num={0}
-                    endpoint={{
-                      patch: `${`/comments/updateComment/${comment._id}`}`,
-                      delete: `${`/comments/deleteComment/${comment._id}`} `,
-                    }}
-                    normalize={'editComment'}
-                    shouldOpen={false}
-                    data={comment}
-                    dataType={'commentsData'}
-                  />
-              
+                <ProfileNameTitle
+                  num={0}
+                  endpoint={{
+                    patch: `${`/comments/updateComment/${comment._id}`}`,
+                    delete: `${`/comments/deleteComment/${comment._id}`} `,
+                  }}
+                  normalize={"editComment"}
+                  shouldOpen={false}
+                  data={comment}
+                  dataType={"commentsData"}
+                />
+
                 <p className="w-full bg-black p-4">{comment.Comment}</p>
                 <FeedInteractions
                   commentsLength={commentsData.length}
